@@ -1,0 +1,25 @@
+app:
+  name: trello
+remember:
+  me:
+    token:
+      key: '#$@#$WERWE%#$%#SDT#^$%^'
+      #days
+      expiry: 30
+file:
+  uploads:
+    root:
+      path: /${app.name}/uploads/
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/projects?currentSchema=trello
+    username: postgres
+    password: root123
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 80

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <span th:include="fragment.html :: header('Home')"></span>
+    <link rel="stylesheet" th:href="@{/css/login-css.css}"/>
+</head>
+<div class="login-page">
+    <div class="img"></div>
+    <div class="login-form-side">
+        <form class="login-form" th:action="@{/auth/logout}" method="post">
+            <h1>Are You sure logging out</h1>
+            <a th:href="@{/}" class="btn btn-outline-info">Home</a>
+            <button class="btn btn-danger" type="submit">Yes</button>
+        </form>
+    </div>
+
+</div>
+<section th:include="fragment.html :: js-files">
+
+</section>
+</body>
+</html>
